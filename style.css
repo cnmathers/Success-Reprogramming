@@ -146,13 +146,15 @@ body {
 /* === HERO SECTION (code rain area) === */
 .hero {
   position: relative;
-  height: 400px; /* Above-the-fold zone */
+  height: 100vh; /* Above-the-fold zone */
   background: black;
   overflow: hidden;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  text-align: center;
+  gap: 20px;
 }
 
 /* Add a black background color to the top navigation */
