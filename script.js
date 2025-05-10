@@ -89,12 +89,14 @@ class Effect {
     this.columns = Math.floor(width / this.fontSize);
     this.symbols = [];
     this.init();
+    ctx.font = this.fontSize + "px monospace";
   }
 }
 
 const effect = new Effect(canvas.width, canvas.height);
 ctx.font = this.fontSize + "px monospace";
-ctx.textAlign = "start";
+ctx.textAlign = "left";
+ctx.textBaseline = "top";  // Ensures predictable Y spacing
 
 let animationFrameId;
 let lastTime = 0;
