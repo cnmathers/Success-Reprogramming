@@ -51,7 +51,7 @@ class Symbol {
     this.chars = "アカサタナハマヤラワ0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ";
     this.x = x;
     this.y = y;
-    this.fontSize = fontSize;
+    this.fontSize = window.innerWidth < 768 ? 14 : 20;
     this.canvasHeight = canvasHeight;
   }
 
@@ -93,8 +93,8 @@ class Effect {
 }
 
 const effect = new Effect(canvas.width, canvas.height);
-ctx.font = effect.fontSize + "px monospace";
-ctx.textAlign = "center";
+ctx.font = this.fontSize + "px monospace";
+ctx.textAlign = "start";
 
 let animationFrameId;
 let lastTime = 0;
