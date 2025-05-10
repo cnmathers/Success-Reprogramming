@@ -218,7 +218,7 @@ body {
 /* Matrix fade transitions */
 #matrixCanvas {
   transition: opacity 1.5s ease-in-out;
-  opacity: 0; /* Start invisible */
+  opacity: 1; /* Start invisible */
 }
 
 /* Title Decode */
