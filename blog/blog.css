@@ -222,6 +222,26 @@ body.dark-mode .post-card {
   border-color: #444;
 }
 
+/* Home Button */
+
+.home-button {
+  display: inline-block;
+  padding: 8px 16px;
+  margin-bottom: 20px;
+  background-color: var(--accent, #ff00ff);
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  box-shadow: 0 0 10px var(--accent);
+  transition: background-color 0.3s ease;
+}
+
+.home-button:hover {
+  background-color: #cc00cc;
+}
+
+
 /* Layout */
 .layout {
     display: flex;
