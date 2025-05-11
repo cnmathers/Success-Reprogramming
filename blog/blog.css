@@ -1,0 +1,320 @@
+body {
+    background: var(--bg, #0d0d0d);
+    color: var(--text, #e0e0e0);
+    font-family: 'Share Tech Mono', monospace;
+    padding: 40px 20px;
+    max-width: 900px;
+    margin: auto;
+  }
+  
+  .blog-header {
+    text-align: center;
+    margin-bottom: 60px;
+  }
+  
+  .glitch-heading {
+    font-size: 2.5rem;
+    color: var(--accent, #ff00ff);
+    position: relative;
+  }
+  .glitch-heading::before,
+  .glitch-heading::after {
+    content: attr(data-text);
+    position: absolute;
+    left: 2px;
+    top: 0;
+    color: var(--accent);
+    background: transparent;
+    overflow: hidden;
+    width: 100%;
+    clip: rect(0, 0, 0, 0);
+  }
+  
+  .post-grid {
+    display: grid;
+    gap: 30px;
+  }
+  
+  .post-card {
+    display: block;
+    padding: 24px;
+    border: 2px solid var(--accent, #ff00ff);
+    border-radius: 8px;
+    background-color: rgba(0,0,0,0.6);
+    transition: all 0.3s ease-in-out;
+    text-decoration: none;
+    color: var(--text);
+    box-shadow: 0 0 12px var(--accent);
+  }
+  .post-card:hover {
+    transform: scale(1.02);
+    background-color: rgba(0,0,0,0.8);
+    box-shadow: 0 0 25px var(--accent);
+  }
+  .post-card h2 {
+    margin-bottom: 10px;
+  }
+  .tag {
+    display: inline-block;
+    font-size: 0.8rem;
+    margin-top: 10px;
+    color: var(--accent);
+  }
+
+  .post-wrapper {
+    max-width: 700px;
+    margin: 60px auto;
+    padding: 20px;
+    background: rgba(0,0,0,0.6);
+    border: 2px solid var(--accent);
+    border-radius: 12px;
+    box-shadow: 0 0 20px var(--accent);
+  }
+  
+  .post-header {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  
+  .meta {
+    font-size: 0.85rem;
+    color: var(--accent);
+    margin-top: 10px;
+  }
+  
+  .post-content h2 {
+    margin-top: 30px;
+    font-size: 1.5rem;
+    color: var(--accent);
+  }
+  
+  .post-content p {
+    margin: 20px 0;
+    line-height: 1.6;
+  }
+  
+  blockquote {
+    border-left: 4px solid var(--accent);
+    padding-left: 16px;
+    font-style: italic;
+    margin: 30px 0;
+    color: var(--text);
+    opacity: 0.9;
+  }
+  
+  code {
+    background: #111;
+    padding: 4px 6px;
+    border-radius: 4px;
+    color: var(--btn-bg);
+    font-size: 0.9rem;
+  }
+  
+  .back-btn {
+    display: inline-block;
+    margin-top: 40px;
+    text-decoration: none;
+    color: var(--accent);
+    font-weight: bold;
+    transition: all 0.3s ease;
+  }
+  
+  .back-btn:hover {
+    color: var(--btn-bg);
+    text-shadow: 0 0 10px var(--btn-bg);
+  }
+  
+
+  #themeToggle {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+    background: transparent;
+    font-size: 1.5rem;
+    border: none;
+    color: var(--accent);
+    cursor: pointer;
+  }
+  
+  .theme-switch {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+  }
+  
+  .theme-switch input {
+    display: none;
+  }
+  
+  .switch-label {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 80px;
+    height: 34px;
+    border: 2px solid var(--accent);
+    border-radius: 34px;
+    padding: 2px;
+    cursor: pointer;
+    background-color: var(--bg);
+    box-shadow: 0 0 10px var(--accent), 0 0 30px rgba(255, 0, 255, 0.3);
+    position: relative;
+    transition: background-color 0.3s ease;
+  }
+  
+  .toggle-thumb {
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    width: 28px;
+    height: 28px;
+    background: var(--accent);
+    border-radius: 50%;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 10px var(--accent), inset 0 0 5px #000;
+  }
+  
+  input:checked + .switch-label .toggle-thumb {
+    transform: translateX(46px);
+    background: var(--btn-bg);
+    box-shadow: 0 0 10px var(--btn-bg), inset 0 0 5px #000;
+  }
+  
+  .toggle-text {
+    font-size: 0.9rem;
+    color: var(--accent);
+    font-family: 'Share Tech Mono', monospace;
+    margin-left: auto;
+    margin-right: 10px;
+    pointer-events: none;
+  }
+
+  h1 {
+    font-weight: bold;
+  }
+
+  p {
+    font-size: 16;
+  }
+
+  /* 🌞 Light theme (default) */
+body {
+  background-color: #ffffff;
+  color: #111111;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* 🌚 Dark theme */
+body.dark-mode {
+  background-color: #111111;
+  color: #ffffff;
+}
+
+/* Optional: override cards, links, headers, etc. */
+body.dark-mode a {
+  color: #9ddfff;
+}
+
+body.dark-mode .post-card {
+  background-color: #222;
+  border-color: #444;
+}
+
+/* Layout */
+.layout {
+    display: flex;
+    gap: 1rem;
+    padding: 2rem;
+    flex-wrap: wrap;
+  }
+  
+  .main-content {
+    flex: 1;
+    min-width: 300px;
+  }
+  
+  /* FIXED Sidebar */
+  .sidebar {
+    width: 20px;
+    padding-left: 1rem;
+    border-left: 1px solid #ccc;
+    align-self: flex-start;
+    /* REMOVE margin-left: auto */
+  }
+  
+
+/* Sidebar nav */
+.sidebar h2 {
+    margin-bottom: 1rem;
+  }
+  
+  .nav-list {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .nav-list > li {
+    margin-bottom: 1rem;
+    margin-left: 3rem;
+  }
+  
+  .nav-list ul {
+    padding-left: 1rem;
+    list-style-type: disc;
+  }
+  
+  .nav-list a {
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  .nav-list a:hover {
+    color: #0070f3;
+  }
+  
+
+/* Toggle button for mobile */
+.sidebar-toggle {
+  display: none;
+  margin: 1rem;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+/* Responsive styles */
+@media screen and (max-width: 768px) {
+  .layout {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    transform: translateX(100%);
+    position: fixed;
+    top: 60px;
+    right: 0;
+    background-color: #fff;
+    height: 100%;
+    max-width: 250px;
+    z-index: 1000;
+    border-left: 1px solid #ccc;
+    box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
+  }
+
+  .sidebar.open {
+    transform: translateX(0);
+  }
+
+  .sidebar-toggle {
+    display: block;
+  }
+
+  body.dark-mode .sidebar {
+    background-color: #111;
+    color: #fff;
+  }
+}
+
+
