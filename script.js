@@ -1,27 +1,41 @@
 // === Typewriter ===
 function startTypewriter() {
-  const subtext = document.querySelector(".subtext");
-  const text = subtext.getAttribute("data-text") || "Welcome to Your Reprogramming";
-  subtext.textContent = "";
-  let i = 0;
-  const speed = 30;
+  const titleEl = document.getElementById("typewriterTitle");
+  const taglineEl = document.querySelector(".subtext");
 
-  function type() {
-    if (i < text.length) {
-      subtext.textContent += text.charAt(i);
-      i++;
-      setTimeout(type, speed);
+  const titleText = titleEl.textContent.trim();
+  titleEl.textContent = ""; // Wipe visible content before typing
+  titleEl.style.visibility = "visible"; // Show it now
+  const taglineText = taglineEl.getAttribute("data-text");
+
+  let titleIndex = 0;
+  let taglineIndex = 0;
+
+  function typeTitle() {
+    if (titleIndex < titleText.length) {
+      titleEl.textContent += titleText.charAt(titleIndex);
+      titleIndex++;
+      setTimeout(typeTitle, 75);
+    } else {
+      // Once title is fully typed, add glow
+      titleEl.classList.add("glow-finish");
+
+      // Start tagline after title finishes
+      setTimeout(() => typeTagline(), 500);
     }
   }
 
-  type();
+  function typeTagline() {
+    if (taglineIndex < taglineText.length) {
+      taglineEl.textContent += taglineText.charAt(taglineIndex);
+      taglineIndex++;
+      setTimeout(typeTagline, 30);
+    }
+  }
+
+  typeTitle();
 }
 
-document.addEventListener("DOMContentLoaded", () => {
-  setTimeout(() => {
-    startTypewriter();
-  }, 6000);
-});
 
 // === Matrix Code Rain ===
 const canvas = document.getElementById("matrixCanvas");
@@ -47,7 +61,23 @@ class Symbol {
 
   draw(context) {
     const char = this.characters.charAt(Math.floor(Math.random() * this.characters.length));
+    const glowColor = "#6a0dad"; // Your brand purple
+
+    // First pass: blurred glow
+    context.save();
+    context.fillStyle = glowColor;
+    context.shadowColor = glowColor;
+    context.shadowBlur = 20;
+    context.globalAlpha = 0.4;
     context.fillText(char, this.x * this.fontSize, this.y * this.fontSize);
+    context.restore();
+  
+    // Second pass: sharp character
+    context.save();
+    context.fillStyle = glowColor;
+    context.globalAlpha = 1;
+    context.fillText(char, this.x * this.fontSize, this.y * this.fontSize);
+    context.restore();
     this.y = (this.y * this.fontSize > this.canvasHeight && Math.random() > 0.975) ? 0 : this.y + 1;
   }
 }
@@ -124,6 +154,9 @@ function endIntro() {
 
   const bgImage = document.querySelector(".hero-bg-image");
   if (bgImage) bgImage.style.opacity = "1";
+
+  // START TYPEWRITER ONLY AFTER RAIN ENDS
+  startTypewriter();
 }
 
 setTimeout(() => {

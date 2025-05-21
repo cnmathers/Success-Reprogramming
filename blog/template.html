@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>🧠 Mindset Shift Protocol</title>
+  <link rel="stylesheet" href="../blog.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="theme-switch">
+    <input type="checkbox" id="modeToggle" />
+    <label for="modeToggle" class="switch-label">
+      <span class="toggle-thumb"></span>
+      <span class="toggle-text">🌑 / ☀️</span>
+    </label>
+  </div>
+
+  <div class="post-wrapper">
+    <header class="post-header">
+      <h1>🧠 Mindset Shift Protocol</h1>
+      <p class="meta">Posted on May 20, 2025 • [MINDSET]</p>
+    </header>
+
+    <section class="post-content">
+      <p>Welcome to your next evolution. In this protocol, you’ll learn to uninstall self-limiting beliefs and rewrite the neural code that shapes your default behavior.</p>
+
+      <h2>Step 1: Observe Your Default Thought Loop</h2>
+      <p>Track recurring negative self-talk or assumptions you carry unconsciously. Write them down. Call them out.</p>
+
+      <blockquote>
+        “I can’t focus.” → “I’m learning to master deep work.”
+      </blockquote>
+
+      <h2>Step 2: Replace with Identity Affirmations</h2>
+      <p>Write affirmations as if they’re true now. Example:</p>
+      <ul>
+        <li>“I follow through.”</li>
+        <li>“My word is law.”</li>
+        <li>“I execute at elite speed.”</li>
+      </ul>
+
+      <h2>Step 3: Loop It</h2>
+      <p>Record these affirmations in your voice and loop them while sleeping or meditating. Let the repetition reprogram your subconscious.</p>
+
+      <h2>Install the New Operating System</h2>
+      <p>Do this daily for 30 days. Reinforce it by taking bold aligned action. Each repetition creates a neural footprint.</p>
+    </section>
+
+    <a href="../blog.html" class="back-btn">← Back to Blog</a>
+  </div>
+
+  <script>
+    // Theme toggle logic
+    const toggle = document.getElementById('modeToggle');
+    const body = document.body;
+    if (localStorage.getItem('theme') === 'dark') {
+      body.classList.add('dark-mode');
+      toggle.checked = true;
+    }
+    toggle.addEventListener('change', () => {
+      if (toggle.checked) {
+        body.classList.add('dark-mode');
+        localStorage.setItem('theme', 'dark');
+      } else {
+        body.classList.remove('dark-mode');
+        localStorage.setItem('theme', 'light');
+      }
+    });
+  </script>
+</body>
+</html>
