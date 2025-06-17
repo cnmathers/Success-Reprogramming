@@ -1,97 +1,128 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf-8" />
-        <meta
-            name="viewport"
-            content="width=device-width, initial-scale=1.0"/>
-        <title>Success Reprogramming</title>
-        <link rel="stylesheet" href="style.css">
-        <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
-    </head>
-    <body>
-        <canvas id="matrixCanvas"></canvas>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Success Reprogramming</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
 
-        <button id="skipIntro">Skip Intro</button>
+</head>
+<body>
 
-        <div id="siteContent" style="opacity: 0; transition: opacity 2s ease-in-out;"></div>
-        <header class="hero">
-            <div class="theme-switch">
-                <input type="checkbox" id="modeToggle" />
-                <label for="modeToggle" class="switch-label">
-                  <span class="toggle-thumb"></span>
-                  <span class="toggle-text">🌑 / ☀️</span>
-                </label>
-              </div>
-            <div class="hero-bg-image"></div>
+  <nav class="nav">
+    <div class="container nav-links">
+      <a href="#about">About</a>
+      <a href="#journal">Download Journal</a>
+      <a href="#testimonials">Testimonials</a>
+      <a href="#contact">Contact</a>
+      <a href="#blog">Visit Our Blog</a>
+    </div>
+  </nav>
 
-            <h1 class="decode-title" id="typewriterTitle">Success Reprogramming</h1>
+  <header class="hero" data-aos="fade-up">
+    <div class="container">
+      <h1>Rewire Your Mind for Success</h1>
+      <p>Join thousands transforming their mindset with guided journaling and daily motivation.</p>
+      <button class="cta-button">Download the Journal</button>
+    </div>
+  </header>
 
-            <div class="subtext" data-text="Welcome to Your Reprogramming"></div>
-            
-            <p>You have been programmed wrong.<br/>Time to reprogram the code.</p>
-            <a href="#modules" class="btn-glow">Begin Reprogramming</a>
-            <div class="topnav">
-                <a class="active" href="#home">Home</a>
-                <a href="#news">News</a>
-                <a href="#contact">Contact</a>
-                <a href="#mission">The Mission</a>
-                <a href="#neurofuel">Neurofuel</a>
-                <a href="blog/" class="nav-link">Visit the Blog</a>
-              </div>
-          </header>
-       
-        <main>
+  <section class="section" id="about" data-aos="fade-up">
+    <div class="container">
+      <h2>What is Success Reprogramming?</h2>
+      <p>Success Reprogramming is your no-BS path to ditching excuses and stepping into the life you were born to live. It's about discipline, mindset, and action.</p>
+    </div>
+  </section>
 
-            <section id="">
-                
-                    <p>Success Reprogramming: Rewire. Reinvent. Rise.</p>
-                    <p></p>
-                    <!-- Download PDF Button -->
-<a href="Success Reprogramming RISE Method.pdf" download class="download-btn">
-    Download the R.I.S.E. Method PDF
-  </a>
+  <section class="section neon-bg" id="features" data-aos="fade-up">
+    <div class="container">
+      <h2>What You'll Get</h2>
+      <div class="features">
+        <div class="feature">
+          <h3>30-Day Journal</h3>
+          <p>Prompts that dig deep into your belief system and create real rewiring.</p>
+        </div>
+        <div class="feature">
+          <h3>Video Motivation</h3>
+          <p>Access curated videos to kickstart your discipline and focus daily.</p>
+        </div>
+        <div class="feature">
+          <h3>Underdog Community</h3>
+          <p>You're not alone—join others rising above their circumstances to win.</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
-            </section>
+  <section class="section" id="journal" data-aos="fade-up">
+    <div class="container">
+      <h2>Download the Journal</h2>
+      <p>Get instant access to our 30-day mindset shift journal and start your success transformation today.</p>
+      <div class="optin">
+        <p><strong>Enter your email to get the PDF now:</strong></p>
+        <input type="email" placeholder="you@example.com" />
+        <br />
+        <button>Send Me the Journal</button>
+      </div>
+    </div>
+  </section>
 
-            <section id="about">
-                <h2>What's the Problem?</h2>
-                <p>You want to rise but you've been stuck. You've been told that you're not good enough, not smart enough, not stong enough, just not "enough" <br/>Here's the problem. You were never meant to follow broken instructions from broken systems.</p>
-                <p> It's not that you're not "enough". You've just been programmed wrong.You’ve been running someone else’s code. It’s time to uninstall their limits and upload truth.</p>
-            </section>
+  <section class="section" id="testimonials" data-aos="fade-up">
+    <div class="container">
+      <h2>What Others Are Saying</h2>
+      <p>"This journal made me face the truth—and that changed everything." — J. Carter</p>
+      <p>"Discipline finally clicked. I’m not waiting for motivation anymore." — R. Singh</p>
+    </div>
+  </section>
 
-            <section id="neurofuel">
-                <h2>Feed Your Mind. Change Your Life.</h2>
-                <p>Welcome to the Success Reprgramming blog: Neurofuel.</p>
-            </br>
-                <a href="/blog/">Visit the Blog</a>
-            </section>
+  <section class="video-section" id="videos" data-aos="zoom-in">
+  <div class="container">
+    <h2>Watch & Learn</h2>
+    <p>Explore our mindset rewiring content in motion.</p>
+    <iframe 
+      src="https://www.youtube.com/embed/ewDkOJfVgy4?si=W-wy0ogMcwdoofb2" 
+      title="YouTube video"
+      allowfullscreen>
+    </iframe>
+  </div>
+</section>
 
-            <section id="modules">
-                <h2>Reprogramming Modules</h2>
-                <div class="video-wrapper">
-                    <iframe src="https://www.youtube.com/embed/akK_LYcQjZs" frameborder="0" allowfullscreen></iframe>
-                </div>
-            </section>
+  <footer data-aos="fade-in">
+    <div class="container">
+      &copy; 2025 Success Reprogramming. All rights reserved.
+    </div>
+  </footer>
 
-            <section id="mission"></section>
+<button id="themeToggle" aria-label="Toggle Theme">🌙</button>
 
-            <section id="connect">
-                <h2>Connect with the Codex</h2>
-                <p>Subscribe follow, join the next update drop, or shoot us a message.</p>
-                <ul class="social-links">
-                    <li><a href="#">YouTube</a></li>
-                    <li><a href="#">Instagram</a></li>
-                    <li><a href="#">Email</a></li>
-                  </ul>
-            </section>
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script>
+  AOS.init({
+    duration: 1200,
+    once: true,
+    easing: 'ease-in-out',
+  });
+</script>
 
-        </main>
+<script>
+  const toggleBtn = document.getElementById("themeToggle");
+  const currentTheme = localStorage.getItem("theme");
 
-        <footer>
-            <p>© 2025 Success Reprogramming</p>
-        </footer>
+  if (currentTheme === "light") {
+    document.body.classList.add("light");
+    toggleBtn.textContent = "🌞";
+  }
 
-        <script src="script.js"></script>
-    </body>
+  toggleBtn.addEventListener("click", () => {
+    document.body.classList.toggle("light");
+    const newTheme = document.body.classList.contains("light") ? "light" : "dark";
+    localStorage.setItem("theme", newTheme);
+    toggleBtn.textContent = newTheme === "light" ? "🌞" : "🌙";
+  });
+</script>
+
+</body>
 </html>

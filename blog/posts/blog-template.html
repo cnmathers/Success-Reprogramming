@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Discipline: The Unsexy Key to Success | Success Reprogramming</title>
+  <meta name="description" content="Discipline beats motivation every time. Discover 5 no-BS tips to build unstoppable discipline and reprogram your mindset for lasting success." />
+  <link rel="stylesheet" href="../blog.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="theme-switch">
+    <input type="checkbox" id="modeToggle" />
+    <label for="modeToggle" class="switch-label">
+      <span class="toggle-thumb"></span>
+      <span class="toggle-text">🌑 / ☀️</span>
+    </label>
+  </div>
+
+  <div class="post-wrapper">
+    <header class="post-header">
+      <h1>Discipline: The Unsexy Key to Success</h1>
+      <p class="meta">Posted on May 20, 2025 • [MINDSET]</p>
+    </header>
+
+    <section class="post-content">
+
+    </section>
+
+    <a href="../blog.html" class="back-btn">← Back to Blog</a>
+  </div>
+
+  <script>
+    // Theme toggle logic
+    const toggle = document.getElementById('modeToggle');
+    const body = document.body;
+    if (localStorage.getItem('theme') === 'dark') {
+      body.classList.add('dark-mode');
+      toggle.checked = true;
+    }
+    toggle.addEventListener('change', () => {
+      if (toggle.checked) {
+        body.classList.add('dark-mode');
+        localStorage.setItem('theme', 'dark');
+      } else {
+        body.classList.remove('dark-mode');
+        localStorage.setItem('theme', 'light');
+      }
+    });
+  </script>
+</body>
+</html>
