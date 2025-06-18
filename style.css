@@ -170,9 +170,13 @@ body.light p {
 .section h2 {
   font-size: 2rem;
   color: #1E90FF;
-  text-shadow: 0 0 3px #1E90FF;
+  text-shadow: 0 0 1px #1E90FF;
   margin-bottom: 20px;
 }
+h2:nth-of-type(odd) {
+  color:#9400D3
+}
+ 
 .section p {
   font-size: 1rem;
   color: #eee;
