@@ -50,7 +50,7 @@ body.dark-mode {
   --accent: #00CED1;
   --btn-bg: #FFD700;
   --card-bg: rgba(0,0,0,0.6);
-  --shadow: 0 0 25px var(--accent);
+  --shadow: 0 0 15px var(--accent);
   --border: 2px solid var(--accent);
 }
 
