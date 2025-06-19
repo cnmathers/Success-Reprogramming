@@ -108,7 +108,7 @@ h1, h2, h3 {
     font-size: 1.3rem;
     color: var(--accent);
     margin-bottom: 10px;
-    text-shadow: 0 0 2px var(--accent);
+    text-shadow: 0 0 1px var(--accent);
   }
   .tag {
     display: inline-block;
@@ -314,7 +314,7 @@ body.dark-mode .post-card {
   
   /* FIXED Sidebar */
   .sidebar {
-    width: 20px;
+    width: 25px;
     padding-left: 1rem;
     border-left: 1px solid #ccc;
     align-self: flex-start;
@@ -334,16 +334,19 @@ body.dark-mode .post-card {
   .nav-list {
     list-style: none;
     padding: 0;
+    margin: 0;
   }
   
   .nav-list > li {
     margin-bottom: 1rem;
-    margin-left: 3rem;
+    margin-left: 1rem;
+    white-space: nowrap;
   }
   
   .nav-list ul {
     padding-left: 1rem;
     list-style-type: disc;
+  
   }
   
   .nav-list a {

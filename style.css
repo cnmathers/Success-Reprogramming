@@ -184,8 +184,8 @@ h2:nth-of-type(odd) {
 }
 .neon-bg {
   background: #111;
-  border-top: 2px solid #9400D3;
-  border-bottom: 2px solid #9400D3;
+  border-top: 2px solid #00CED1;
+  border-bottom: 2px solid #00CED1;
 }
 
 /* Features Grid */
@@ -270,19 +270,23 @@ h2:nth-of-type(odd) {
 }
 
 
-/* Optin Section */
-.optin {
+/* Toolkit Section */
+.toolkit {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
   margin-top: 20px;
 }
-input[type="email"] {
-  padding: 10px;
-  border: none;
-  width: 100%;
-  max-width: 300px;
-  margin-top: 10px;
-  border-radius: 4px;
+
+.toolkit img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 0 30px #1504cc;
 }
-.optin button {
+
+.toolkit button {
   margin-top: 10px;
   padding: 10px 20px;
   background: #00CED1;
@@ -293,7 +297,7 @@ input[type="email"] {
   cursor: pointer;
   box-shadow: 0 0 10px #00CED1;
 }
-.optin button:hover {
+.toolkit button:hover {
   background: #FFD700;
   box-shadow: 0 0 15px #FFD700;
 }
