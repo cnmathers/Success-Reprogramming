@@ -387,7 +387,7 @@ body.dark-mode .post-card {
     right: 0;
     background-color: #fff;
     height: 100%;
-    max-width: 250px;
+    width: 250px; /* <-- Fixed width */
     z-index: 1000;
     border-left: 1px solid #ccc;
     box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);

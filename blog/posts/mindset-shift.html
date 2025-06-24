@@ -3,27 +3,37 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>🧠 Mindset Shift Protocol</title>
+  <title>Mindset Shift Protocol</title>
   <link rel="stylesheet" href="../blog.css" />
   <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
 </head>
 <body>
+  <div class="theme-switch">
+    <input type="checkbox" id="modeToggle" />
+    <label for="modeToggle" class="switch-label">
+      <span class="toggle-thumb"></span>
+      <span class="toggle-text">🌑 / ☀️</span>
+    </label>
+  </div>
 
   <article class="post-wrapper">
+    <a href="../index.html" class="back-link">← Back to Blog</a>
     <header class="post-header">
       <h1 class="glitch-heading" data-text="MINDSET SHIFT PROTOCOL">MINDSET SHIFT PROTOCOL</h1>
       <p class="meta">Uploaded: April 20, 2025 • Read Time: ~4 min</p>
     </header>
 
     <section class="post-content">
-      <p>You've been running on outdated code — beliefs and limitations embedded before you were aware they existed. This post is about finding that root directory and rewriting it.</p>
+      <p>You've been running on outdated code — beliefs and limitations that were embedded before you were aware they even existed. This post is about finding that root directory and rewriting it.</p>
 
       <blockquote>
         <p>“If your programming wasn't installed by you, it’s time for a recompile.”</p>
       </blockquote>
 
       <h2>🔍 Identify Your Limiting Scripts</h2>
-      <p>Look at the thoughts that run on loop. The silent scripts that say “I can’t,” “I shouldn’t,” “I’m not enough.” These aren’t facts. They’re injected code from broken systems.</p>
+      <p>Look at the thoughts that run on loop. The silent scripts that say “I can’t,” “I shouldn’t,” “I’m not good enough.” These aren’t facts. They’re injected code from broken systems.</p>
+      <p>Maybe these limiting beliefs were put there by well meaning adults trying to protect you as a child. Maybe by a teacher who didn't see your talent.</p>
+      <p>But that doesn't matter now. Those thoughts, that old code, if it isn't working for you, then it needs to be updated.</p>
 
       <h2>💡 Write New Functions</h2>
       <p>Instead of:
@@ -31,15 +41,43 @@
         <br>Write:
         <br><code>function selfWorth() { return internalTruth; }</code>
       </p>
-
-      <h2>🧠 Repetition is Reprogramming</h2>
+      <p>Here's the truth. Your self-worth comes from your mindset. What you believe about yourself dictates how yoou move in the world.</p>
+      <p>You're never gonna make everybody happy. And living small to please someone who let their dream fail? That's outdated code. It no longer serves its purpose.</p>
+      
+      <h2>Repetition is Reprogramming</h2>
       <p>Affirmations. Audio. Visual cues. Embed new beliefs like a repeating script in your OS. Overwrite until overwrite is default.</p>
+      <p>But here's the deal. You have to use emotion.</p>
+      <p>Without emotion, you can't tell your subsconcious that your updated code is valid. That its real.</p>
+      <p>Remeber the first time someone told you that you couldn't do it? You could be an astronaut because you weren't smart enough? Or you're not good enough for the team?</p>
+      <p>You felt that. And your subconscious took it and programmed it into your character.</p>
+      <p>Now it time to do the reverse.</p>
+      <p>See the future you in your mind. The real you. Speak what you see outloud. Write it down. Live like this version of you already exists... because it does.</p>
+      <p>Do this with powerful emotion and you'll see a shift from the old code into the new you.</p>
 
-      <p>You're not broken. You're just running someone else's version. Time to install the upgrade.</p>
+      <p>You're not broken. You're just running someone else's version of you. Time to install the upgrade.</p>
 
       <a class="back-btn" href="../index.html">← Back to the Blog</a>
     </section>
   </article>
+
+  <script>
+    // Theme toggle logic
+    const toggle = document.getElementById('modeToggle');
+    const body = document.body;
+    if (localStorage.getItem('theme') === 'dark') {
+      body.classList.add('dark-mode');
+      toggle.checked = true;
+    }
+    toggle.addEventListener('change', () => {
+      if (toggle.checked) {
+        body.classList.add('dark-mode');
+        localStorage.setItem('theme', 'dark');
+      } else {
+        body.classList.remove('dark-mode');
+        localStorage.setItem('theme', 'light');
+      }
+    });
+  </script>
 
 </body>
 </html>
