@@ -18,10 +18,10 @@
         <span class="toggle-text">🌑 / ☀️</span>
       </label>
     </div>
-    <!-- Sidebar toggle for mobile -->
-    <button id="sidebarToggle" class="sidebar-toggle">☰ Menu</button>
   </header>
 
+  <!-- Sidebar toggle for mobile -->
+  <button id="sidebarToggle" class="sidebar-toggle">☰ Menu</button>
   <main class="layout">
     <!-- Main content -->
     <div class="main-content">
@@ -89,6 +89,8 @@
   </footer>
 
   <script>
+
+  document.addEventListener('DOMContentLoaded', function () {
     // Theme toggle
     const toggle = document.getElementById('modeToggle');
     const body = document.body;
@@ -112,9 +114,13 @@
     const sidebar = document.getElementById('sidebar');
     const sidebarToggle = document.getElementById('sidebarToggle');
 
-    sidebarToggle.addEventListener('click', () => {
-      sidebar.classList.toggle('open');
-    });
-  </script>
+    if (sidebar && sidebarToggle) {
+      sidebarToggle.addEventListener('click', () => {
+        sidebar.classList.toggle('open');
+      });
+    }
+  });
+</script>
+
 </body>
 </html>

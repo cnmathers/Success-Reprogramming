@@ -18,6 +18,8 @@ body {
     max-width: 900px;
     margin: auto;
     transition: background 0.3s ease, color 0.3s ease;
+    word-wrap: break-word;
+    overflow-x: hidden;
   }
   p {
   font-size: 16px;
@@ -65,7 +67,8 @@ h1, h2, h3 {
   }
   
   .glitch-heading {
-    font-size: 2.5rem;
+    font-size: clamp(1.8rem, 6vw, 2.5rem);
+    text-align: center;
     color: var(--accent, #ff00ff);
     position: relative;
   }
@@ -84,12 +87,16 @@ h1, h2, h3 {
   
   .post-grid {
     display: grid;
+    grid-template-columns: 1fr;
     gap: 30px;
   }
   
   .post-card {
     display: block;
-    padding: 24px;
+    padding: 16px;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
     border: var(--border);
     border-radius: 8px;
     background-color: var(--card-bg);
@@ -312,14 +319,24 @@ body.dark-mode .post-card {
     padding-left: 1rem; /* pushes content away from divider */
   }
   
-  /* FIXED Sidebar */
-  .sidebar {
-    width: 25px;
-    padding-left: 1rem;
-    border-left: 1px solid #ccc;
-    align-self: flex-start;
-    /* REMOVE margin-left: auto */
+  /* Default: desktop view */
+.sidebar {
+  width: 50px;
+  padding-left: 1rem;
+  border-left: 1px solid #ccc;
+  align-self: flex-start;
+  position: static;
+  background-color: transparent;
+  height: auto;
+  box-shadow: none;
+  transform: none;
+  z-index: auto;
+  display: block;
   }
+  /* Default: Hide on desktop */
+.sidebar-toggle {
+  display: none;
+}
   
 
 /* Sidebar nav */
@@ -329,6 +346,7 @@ body.dark-mode .post-card {
   color: var(--accent);
   margin-bottom: 1rem;
   text-shadow: 0 0 1px var(--accent);
+  white-space: nowrap;
   }
   
   .nav-list {
@@ -364,50 +382,81 @@ body.dark-mode .post-card {
     text-shadow: 0 0 8px var(--btn-bg);
   }
   
-
-/* Toggle button for mobile */
-.sidebar-toggle {
-  display: none;
-  margin: 1rem;
-  padding: 0.5rem 1rem;
-  font-size: 1rem;
-  cursor: pointer;
-}
-
 /* Responsive styles */
-@media screen and (max-width: 768px) {
+  @media screen and (max-width: 768px) {
   .layout {
     flex-direction: column;
   }
 
+   body {
+    padding: 20px 12px;
+  }
+
+   .main-content {
+    padding: 0;
+  }
+
+  .post-wrapper {
+    padding: 12px;
+  }
+
+  .sidebar-toggle {
+    display: block;
+    position: fixed;
+    top: 7.5rem;
+    right: 2.5rem;
+    z-index: 2001;
+    background: var(--accent);
+    color: white;
+    border: none;
+    padding: 0.3rem 0.75rem;
+    border-radius: 2px;
+    font-size: 0.7rem;
+    line-height: 1;
+  }
+
   .sidebar {
-    transform: translateX(100%);
     position: fixed;
     top: 60px;
     right: 0;
+    left: auto;
     background-color: #fff;
     height: 100%;
-    width: 250px; /* <-- Fixed width */
+    width: 250px;
+    transform: translateX(100%);
+    transition: transform 0.3s ease;
     z-index: 1000;
-    border-left: 1px solid #ccc;
     box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
+    padding-left: 1rem;
   }
 
   .sidebar.open {
     transform: translateX(0);
   }
 
-  .sidebar-toggle {
-    display: block;
-  }
-
   body.dark-mode .sidebar {
     background-color: #111;
     color: #fff;
   }
+
+    footer {
+    font-size: 0.9rem;
+    padding: 1.2rem 0.5rem;
+  }
+
+  .footer .container {
+    width: 100%;
+    padding: 0 1rem;
+    box-sizing: border-box;
+  }
 }
 
+
 footer {
+  padding: 1rem;
   text-align: center;
+  font-size: 1rem;
+  background-color: #fff;
+  color: #333;
 }
 
