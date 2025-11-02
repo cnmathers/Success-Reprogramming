@@ -89,7 +89,7 @@ body.light p {
 
 /* Hero */
 .hero {
-  background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.5)), url('../assets/images/hero-bg-image.png') center/cover no-repeat;
+  background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.5)), url('../assets/images/hero-bg-image3.png') center/cover no-repeat;
   text-align: center;
   padding: 120px 20px;
 }
@@ -166,6 +166,184 @@ body.light p {
   box-shadow: 0 0 25px #9400D3;
 }
 
+/* --- Vision Section --- */
+.vision {
+  background: #0a0a0a;
+  position: relative;
+}
+
+/* New Vision Text Section */
+.vision-text {
+  background: #0a0a0a;
+}
+.vision-text-grid {
+  display: grid;
+  gap: 40px;
+  align-items: center;
+}
+@media (min-width: 900px) {
+  .vision-text-grid {
+    grid-template-columns: 1.1fr 1fr;
+  }
+}
+.vision-text-content {
+  max-width: 100%;
+}
+.vision-text-content h2 {
+  font-size: 2rem;
+  color: #0fe0d2;
+  text-shadow: 0 0 1px #0fe0d2;
+  margin-bottom: .5rem;
+}
+.vision-text-content p {
+  color: #ccc;
+  margin-bottom: 1.5rem;
+  line-height: 1.7;
+}
+.vision-text-video video {
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px;
+}
+
+/* New Vision System Section */
+.vision-system {
+  background: #0d0d0d;
+  padding-top: 20px;
+}
+
+
+.vision-head h2 {
+  font-size: 2rem;
+  color: #0fe0d2;
+  text-shadow: 0 0 1px #0fe0d2;
+  margin-bottom: .25rem;
+  text-align: center;
+}
+.vision-sub {
+  text-align: center;
+  color: #ccc;
+  margin-bottom: 2rem;
+}
+
+.vision-grid {
+  display: grid;
+  gap: 32px;
+  align-items: start;
+}
+@media (min-width: 900px) {
+  .vision-grid {
+    grid-template-columns: 1.1fr 1.4fr;
+    gap: 40px;
+  }
+}
+
+.vision-media {
+  margin: 0;
+  background: #111;
+  border: 1px solid #00CED1;
+  border-radius: 12px;
+  padding: 12px;
+  box-shadow: 0 0 15px #1E90FF33;
+}
+.vision-media img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+.vision-media figcaption {
+  color: #9adbe0;
+  font-size: .9rem;
+  margin-top: 8px;
+  text-align: center;
+}
+
+.vision-content { display: grid; gap: 20px; }
+
+.vision-intro {
+  color: #eee;
+  line-height: 1.7;
+}
+
+.vision-pills {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+.pill {
+  display: inline-block;
+  border: 1px solid #00CED1;
+  box-shadow: 0 0 8px #00CED1;
+  color: #00FFEF;
+  font-weight: 600;
+  padding: 6px 10px;
+  border-radius: 999px;
+  font-size: .9rem;
+  background: rgba(0,0,0,0.4);
+}
+
+.vision-cards {
+  display: grid;
+  gap: 16px;
+}
+@media (min-width: 600px) {
+  .vision-cards {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+.vision-card {
+  background: rgba(255,255,255,0.05);
+  border: 1px solid #00CED1;
+  border-radius: 10px;
+  padding: 16px;
+  box-shadow: 0 0 12px #1E90FF33;
+}
+.vision-card h3 {
+  color: #ff00d9;
+  text-shadow: 0 0 4px #ff00d9;
+  margin-bottom: .35rem;
+  font-size: 1.05rem;
+}
+.vision-card p { color: #ccc; line-height: 1.6; }
+
+.vision-stats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px 18px;
+  list-style: none;
+  padding: 0;
+}
+.vision-stats li {
+  background: #111;
+  border: 1px dashed #9400D3;
+  border-radius: 8px;
+  padding: 10px 12px;
+  color: #ddd;
+  box-shadow: 0 0 10px #9400D344;
+}
+.vision-stats strong {
+  color: #bc00dd;
+}
+
+/* spacing for CTA reuse */
+.vision-cta { margin-top: 6px; }
+
+/* --- Light theme overrides --- */
+body.light .vision {
+  background: #f8f9fb;
+}
+body.light .vision-media {
+  background: #fff;
+  border-color: #00CED1;
+  box-shadow: 0 0 12px #00CED155;
+}
+body.light .vision-sub { color: #444; }
+body.light .vision-intro { color: #222; }
+body.light .vision-card { background: #fff; color: #000; border-color: #00CED1; box-shadow: 0 0 8px #00CED155; }
+body.light .vision-stats li { background: #fff; border-color: #6a00f4; color: #333; }
+
+
 /* Sections */
 .section h2 {
   font-size: 2rem;
@@ -187,6 +365,91 @@ h2:nth-of-type(odd) {
   border-top: 2px solid #00CED1;
   border-bottom: 2px solid #00CED1;
 }
+
+/* About Section */
+/* Sections */
+.section h2 {
+  font-size: 2rem;
+  color: #0fe0d2;
+  text-shadow: 0 0 2px #0fe0d2;
+  margin-bottom: 20px;
+}
+.section p {
+  font-size: 1rem;
+  color: #eee;
+  line-height: 1.7;
+}
+
+/* --- Carousel --- */
+.carousel {
+  position: relative;
+  margin-top: 16px;
+}
+
+.carousel-viewport {
+  overflow-x: auto;           /* touch/trackpad swipe */
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+}
+
+.carousel-track {
+  display: flex;
+  gap: 24px;
+  padding: 10px 4px 16px;
+}
+
+.carousel-track > .offering-card {
+  scroll-snap-align: start;
+  min-width: min(85%, 360px); /* mobile: big cards */
+}
+
+/* desktop: 3-up sizing */
+@media (min-width: 992px) {
+  .carousel-track > .upgrades-card {
+    min-width: calc((100% - 2 * 24px) / 3); /* 3 cards with 24px gap */
+  }
+}
+
+/* Nav buttons */
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 2;
+  width: 44px;
+  height: 44px;
+  border: 1px solid #333;
+  border-radius: 50%;
+  background: #0f0f10;
+  color: #fff;
+  cursor: pointer;
+  display: grid;
+  place-items: center;
+  transition: opacity .2s ease, transform .2s ease;
+}
+
+.carousel-btn:hover { transform: translateY(-50%) scale(1.05); }
+.carousel-btn:disabled { opacity: .35; cursor: default; }
+
+.carousel-btn.prev { left: -6px; }
+.carousel-btn.next { right: -6px; }
+
+/* make cards look consistent inside carousel (uses your existing styles) */
+.upgrades-card {
+  background: #111;
+  border-radius: 8px;
+  padding: 20px;
+  text-align: center;
+}
+.upgrades-card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+.upgrades-card .title { font-weight: 700; margin-top: 12px; font-size: 1.05rem; }
+.upgrades-card .price { color: #ccc; }
+
 
 /* Features Grid */
 .features {
@@ -340,6 +603,18 @@ h2:nth-of-type(odd) {
   color: #fff;
   box-shadow: 0 0 20px #FF00FF;
 }
+/* ---Cookie Banner---*/
+.cookie-banner {
+  position: fixed; inset: auto 16px 16px 16px; z-index: 9999;
+  background: #111; color: #eee; border: 1px solid #333; border-radius: 10px;
+  padding: 14px 16px; box-shadow: 0 8px 24px rgba(0,0,0,.45);
+}
+.cookie-banner .btns { display: flex; gap: 10px; margin-top: 8px; flex-wrap: wrap; }
+.cookie-banner button { padding: 8px 14px; border: 0; border-radius: 6px; cursor: pointer; }
+#cookieAccept { background: #00CED1; color: #000; font-weight: 700; }
+#cookieReject { background: #333; color: #fff; }
+body.light .cookie-banner { background:#fff; color:#111; border-color:#ddd; }
+body.light #cookieReject { background:#eee; color:#111; }
 
 
 /* Footer */
